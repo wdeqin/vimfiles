@@ -4,6 +4,8 @@ if has('gui_running')
     set background=dark
     colorscheme solarized
     set guifont=YaHei_Consolas_Hybrid:h10:cANSI
+    " highlight current line
+    set cursorline
 endif
 filetype plugin indent on
 
@@ -15,9 +17,6 @@ let g:Powerline_colorscheme='solarized256'
 
 " show cursor current position
 set ruler
-
-" highlight current line
-set cursorline
 
 " highlight current column
 set cursorcolumn
@@ -111,6 +110,11 @@ function! SetTag()
 endfunction
 nmap <leader>st :call SetTag()<CR>
 nmap <leader>gt :silent !ctags -R<CR>
+
+" encoding
+set fileencodings=utf-8,acsii,cp936,gbk,gb2312,gb18030
+set encoding=utf-8
+set termencoding=utf-8
 
 " git clone https://github.com/scrooloose/nerdtree.git
 " git clone https://github.com/altercation/vim-colors-solarized.git
