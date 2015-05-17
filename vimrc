@@ -6,6 +6,10 @@ if has('gui_running')
     set guifont=YaHei_Consolas_Hybrid:h10:cANSI
     " highlight current line
     set cursorline
+    " change working directory
+    if !empty($WS)
+        cd $WS
+    endif
 endif
 filetype plugin indent on
 
@@ -51,11 +55,6 @@ set guioptions-=R
 set guioptions-=m
 " hide toolbar
 set guioptions-=T
-
-" change working directory
-if !empty($WS)
-    cd $WS
-endif
 
 " NERDTree file browser
 " open NERDTree when startup
@@ -112,7 +111,7 @@ nmap <leader>st :call SetTag()<CR>
 nmap <leader>gt :silent !ctags -R<CR>
 
 " encoding
-set fileencodings=utf-8,acsii,cp936,gbk,gb2312,gb18030
+set fileencodings=utf-8,ascii,cp936,gbk,gb2312,gb18030
 set encoding=utf-8
 set termencoding=utf-8
 
