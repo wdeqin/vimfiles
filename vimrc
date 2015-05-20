@@ -6,11 +6,16 @@ if has('gui_running')
     set guifont=YaHei_Consolas_Hybrid:h10:cANSI
     " highlight current line
     set cursorline
+    " highlight current column
+    set cursorcolumn
     " change working directory
     if !empty($WS)
         cd $WS
     endif
+else
+    colorscheme slate
 endif
+
 filetype plugin indent on
 
 set lines=50 columns=164
@@ -21,9 +26,6 @@ let g:Powerline_colorscheme='solarized256'
 
 " show cursor current position
 set ruler
-
-" highlight current column
-set cursorcolumn
 
 " highlight search result(s)
 set hlsearch
@@ -38,6 +40,8 @@ set autoindent!
 set tabstop=4
 set expandtab!
 set colorcolumn=80
+" reload file when changing
+set autoread
 
 " enable code fold
 set foldmethod=syntax
