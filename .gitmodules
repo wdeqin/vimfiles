@@ -10,12 +10,12 @@
 [submodule "bundle/vim-powerline"]
         path=bundle/vim-powerline
         url=https://github.com/Lokaltog/vim-powerline.git
-[submodule "bundle/YouCompleteMe"]
-        path=bundle/YouCompleteMe
-        url=https://github.com/Valloric/YouCompleteMe.git
-[submodule "bundle/ycmd"]
-        path=bundle/ycmd
-        url=https://github.com/Valloric/ycmd.git
 [submodule "bundle/vim-autoformat"]
         path=bundle/vim-autoformat
         url=https://github.com/Chiel92/vim-autoformat.git
+[submodule "bundle/ultisnips"]
+        path=bundle/ultisnips
+        url=https://github.com/SirVer/ultisnips.git
+[submodule "bundle/vim-snippets"]
+        path=bundle/vim-snippets
+        url=https://github.com/honza/vim-sinppets.git

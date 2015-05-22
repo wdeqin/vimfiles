@@ -33,6 +33,7 @@ set hlsearch
 " disabled split long line
 set nowrap
 
+set nocompatible
 set number!
 set backspace=indent,eol,start
 set shiftwidth=4
@@ -118,7 +119,3 @@ nmap <leader>gt :silent !ctags -R<CR>
 set fileencodings=utf-8,ascii,cp936,gbk,gb2312,gb18030
 set encoding=utf-8
 set termencoding=utf-8
-
-" git clone https://github.com/scrooloose/nerdtree.git
-" git clone https://github.com/altercation/vim-colors-solarized.git
-" git clone https://github.com/fatih/vim-go.git
