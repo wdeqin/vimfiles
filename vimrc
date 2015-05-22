@@ -1,9 +1,10 @@
 execute pathogen#infect()
-syntax on
+let g:pathogen_disabled = []
+
 if has('gui_running')
     set background=dark
     colorscheme solarized
-    set guifont=YaHei_Consolas_Hybrid:h10:cANSI
+    set guifont=YaHei_Consolas_Hybrid:h10
     " highlight current line
     set cursorline
     " highlight current column
@@ -17,6 +18,7 @@ else
 endif
 
 filetype plugin indent on
+syntax on
 
 set lines=50 columns=164
 
@@ -33,7 +35,7 @@ set hlsearch
 " disabled split long line
 set nowrap
 
-set nocompatible
+"set nocompatible
 set number!
 set backspace=indent,eol,start
 set shiftwidth=4
@@ -116,6 +118,6 @@ nmap <leader>st :call SetTag()<CR>
 nmap <leader>gt :silent !ctags -R<CR>
 
 " encoding
-set fileencodings=utf-8,ascii,cp936,gbk,gb2312,gb18030
+set fileencodings=utf-8,gb2312,gb18030,gbk
 set encoding=utf-8
 set termencoding=utf-8
