@@ -1,5 +1,7 @@
+if !has('gui_running')
+    let g:pathogen_disabled = [ "ultisnips", "vim-powerline" ]
+endif
 execute pathogen#infect()
-let g:pathogen_disabled = []
 
 if has('gui_running')
     set background=dark
@@ -10,10 +12,9 @@ if has('gui_running')
     " highlight current column
     set cursorcolumn
     " change working directory
-    if !empty($WS)
-        cd $WS
-    endif
 else
+    "colorscheme slate
+    set background=dark
     colorscheme slate
 endif
 
@@ -34,6 +35,10 @@ set hlsearch
 
 " disabled split long line
 set nowrap
+
+" terminal 256 color
+" set t_Co=256
+
 
 "set nocompatible
 set number!
@@ -109,6 +114,12 @@ nmap <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
 nmap <leader>tl :Tlist<CR>
 nmap <leader>fl :NERDTreeToggle<CR>
 
+function! CdWS()
+    if !empty($WS)
+        cd $WS
+    endif
+endfunction
+
 function! SetTag()
     if filereadable("tags")
         :set tags=tags<CR>
@@ -116,6 +127,16 @@ function! SetTag()
 endfunction
 nmap <leader>st :call SetTag()<CR>
 nmap <leader>gt :silent !ctags -R<CR>
+nmap <leader>ws :call CdWS()<CR>
+
+" plugin UltiSnips
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+" let g:UltiSnipsEditSplit="vertical"
 
 " encoding
 set fileencodings=utf-8,gb2312,gb18030,gbk
