@@ -1,12 +1,14 @@
 if !has('gui_running')
     let g:pathogen_disabled = [ "ultisnips", "vim-powerline" ]
+else
+    let g:pathogen_disabled = [ "ultisnips", "vim-snippets"]
 endif
 execute pathogen#infect()
 
 if has('gui_running')
     set background=dark
     colorscheme solarized
-    set guifont=YaHei_Consolas_Hybrid:h10
+    set guifont=YaHei_Consolas_Hybrid:h12
     " highlight current line
     set cursorline
     " highlight current column
@@ -86,7 +88,7 @@ map <C-n> :NERDTreeToggle<CR>
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " NERDTreeToggle Position
-let NERDTreeWinPos="right"
+let NERDTreeWinPos="left"
 
 " Show hidden files
 " let NERDTreeShowHidden=1
@@ -116,7 +118,7 @@ nmap <leader>fl :NERDTreeToggle<CR>
 
 function! CdWS()
     if !empty($WS)
-        cd $WS
+        :NERDTree $WS
     endif
 endfunction
 

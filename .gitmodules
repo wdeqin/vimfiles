@@ -11,8 +11,8 @@
     path=bundle/vim-powerline
     url=https://github.com/Lokaltog/vim-powerline.git
 [submodule "bundle/vim-autoformat"]
-    path=bundle/vim-autoformat
-    url=https://github.com/Chiel92/vim-autoformat.git
+	path = bundle/vim-autoformat
+	url = https://github.com/Chiel92/vim-autoformat.git
 [submodule "bundle/ultisnips"]
     path=bundle/ultisnips
     url=https://github.com/SirVer/ultisnips.git
@@ -22,3 +22,9 @@
 [submodule "cmd-colors-solarized"]
 	path = cmd-colors-solarized
 	url = https://github.com/neilpa/cmd-colors-solarized.git
+[submodule "bundle/emmet-vim"]
+	path = bundle/emmet-vim
+	url = http://github.com/mattn/emmet-vim.git
+[submodule "bundle/vim-indent-guides"]
+	path = bundle/vim-indent-guides
+	url = https://github.com/nathanaelkane/vim-indent-guides.git
